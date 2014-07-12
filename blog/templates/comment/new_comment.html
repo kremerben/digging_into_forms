@@ -1,0 +1,28 @@
+{% extends "results_manager_base.html" %}
+
+{% block title %}MY M-F Form!{% endblock %}
+
+{%  block content %}
+
+
+<form method="Post">
+    {% csrf_token %}
+{#    {{ form.as_p }}#}
+
+    <ol>
+        {% for field in comment_form %}
+            <li>
+               <span style="color:red;font-size: .5em"> {{ field.errors }}</span>
+                {{ field.label_tag }}
+                {{ field }}
+            </li>
+        {%  endfor %}
+    </ol>
+
+{#    <ul>#}
+{#    {{ comment_form.as_ul }}#}
+{#        </ul>#}
+    <input type="submit" value="Submit comment" />
+</form>
+
+{% endblock %}

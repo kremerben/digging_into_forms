@@ -1,0 +1,22 @@
+{% extends "results_manager_base.html" %}
+
+{% block title %}Author Listing Page{% endblock %}
+
+{%  block content %}
+<h1>Authors</h1>
+<ul>
+    {% for author in authors %}
+        <li>
+{#            <a href="{% url "view_author" author.id %}" >#}
+            {{ author.name }}
+            {% if author.email != None and author.email != "" %}
+                <ul><li><a href="mailto:{{ author.email }}">{{ author.email }}</a></li></ul>
+            {% endif %}
+{#        </a>#}
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'new_author' %}">Add a new author</a>
+
+{% endblock %}
+

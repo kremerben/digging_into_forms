@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% load staticfiles %}
+
+    <meta charset="UTF-8">
+    <title>{%  block title %}Digging into Forms1{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" />
+</head>
+<body>
+{% block content %}{% endblock %}
+
+
+<ul>
+    NAV GOES HERE
+{#<li><a href="{% url "home" %}">Back Home</a></li>#}
+{#    <li><a href="{%  url 'genres' %}">Genres</a></li>#}
+{#    <li><a href="{%  url 'movies' %}">Movies</a></li>#}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "results_manager_base.html" %}
+
+{% block title %}Comments Page{% endblock %}
+
+{%  block content %}
+
+<h1>Comments</h1>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment.comment_body }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'new_comment' %}">Add a new comment</a>
+
+{% endblock %}

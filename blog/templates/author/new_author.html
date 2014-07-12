@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MY M-F Form!</title>
+    <style type="text/css">
+        body {
+            margin: 40px;
+            font-size: 2em;
+            font-family: Helvetica,sans-serif;
+        }
+    input {
+        display: block;
+margin: 7px;
+height: 1.2em;
+        font-size: 1em;
+    }
+    form select {
+        font-size: .8em;
+    }
+    </style>
+</head>
+<body>
+
+<form method="Post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#    <ol>#}
+{#        {% for field in author_form %}#}
+{#            <li>#}
+{#                {{ field.label_tag }}#}
+{#                {{ field }}#}
+{#            </li>#}
+{#        {%  endfor %}#}
+{#    </ol>#}
+
+{#    <ul>#}
+{#    {{ comment_form.as_ul }}#}
+{#        </ul>#}
+    <input type="submit" value="Submit author" />
+</form>
+
+
+
+</body>
+</html>

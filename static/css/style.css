@@ -1,0 +1,32 @@
+body {
+    font-family: 'Economica', sans-serif;
+                font-size: 2em;
+    margin:0 auto 0 400px;
+}
+h1, form {
+    font-size: 2em;
+}
+.serif {
+    font-family: serif;
+}
+.center {
+    color: #0f0f0f;
+    width:458px;
+    *width:500px;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid #003366;
+    padding: 20px;
+}
+
+
+
+    input {
+        display: block;
+margin: 7px;
+height: 1.2em;
+        font-size: 1em;
+    }
+    form select {
+        font-size: .8em;
+    }

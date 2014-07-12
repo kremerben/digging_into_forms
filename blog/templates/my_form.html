@@ -1,0 +1,24 @@
+{% extends "results_manager_base.html" %}
+
+{% block title %}Main Form{% endblock %}
+
+{%  block content %}
+
+<form method="Post">
+    {% csrf_token %}
+
+    <ol>
+        {% for field in comment_form %}
+            <li>
+                {{ field.label_tag }}
+                {{ field }}
+            </li>
+        {%  endfor %}
+    </ol>
+
+{#    <ul>#}
+{#    {{ comment_form.as_ul }}#}
+{#        </ul>#}
+    <input type="submit" value="Submit comment" />
+</form>
+{% endblock %}
